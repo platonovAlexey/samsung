@@ -1,0 +1,215 @@
+include blocks/head-service/head
+include common/mixins
+include common/js
+
+
+body
+	.layout_center_wrapper-project
+		include templates/header
+
+		.container
+			section.slider
+				.container
+					.row
+						#owl-demo
+							div
+								a(href="http://www.ulmart.ru/search?string=S8&rootCategory=93287&sort=6&category=80252&filters=active%3Ab&applied=true&brands=60&jdSuppliers=&warranties=&bargainTypes=&receiptTime=&priceColors=&shops=&labels=&available=false&reserved=false&suborder=false&rec=false&superPrice=false&showCrossboardGoods=false&showUlmartGoods=false&specOffers=false&availableCounts=", target="_blank")
+									img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/slide1.jpg", alt="слайд")
+							div
+								a(href="https://www.ulmart.ru/dynamic/page/qledtv", target="_blank")
+									img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/slide2.jpg", alt="слайд")
+							div
+								a(href="http://www.samsung.com/ru/promotions/anti-tangle/", target="_blank")
+									img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/slide3.jpg", alt="слайд")
+							div
+								a(href="http://www.samsung.com/ru/promotions/wm/addwash/", target="_blank")
+									img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/slide4.jpg", alt="слайд")
+
+		.container
+			section.section-goods
+				.container
+					.row
+						h1.title Хиты продаж
+						.row
+							+grid-3()
+								each item, number in data.slice(0,1)
+									+goods(item)
+							+grid-3()
+								each item, number in data.slice(1,2)
+									+goods(item)
+							+grid-3()
+								each item, number in data.slice(2,3)
+									+goods(item)
+							+grid-3()
+								each item, number in data.slice(3,4)
+									+goods(item)
+							+grid-3()
+								each item, number in data.slice(4,5)
+									+goods(item)
+							+grid-3()
+								each item, number in data.slice(5,6)
+									+goods(item)
+							+grid-3()
+								each item, number in data.slice(6,7)
+									+goods(item)
+							+grid-3()
+								each item, number in data.slice(7,8)
+									+goods(item)
+
+		.container
+			section.catalog-section
+				.container
+					.row
+						+grid-2()
+							.catalog-banner
+								.catalog-banner-inner.catalog-banner-inner-one
+									.catalog-banner-content
+										h2.catalog-banner-content__title
+											| Смартфоны
+										.catalog-banner-btn
+											a(href="https://www.ulmart.ru/dynamic/page/samsung_smartphone_page", target="_blank", class="catalog-banner-btn__link")
+												| Смотреть все
+						+grid-2()
+							.catalog-banner
+								.catalog-banner-inner.catalog-banner-inner-two
+									.catalog-banner-content
+										h2.catalog-banner-content__title
+											| Планшеты
+										.catalog-banner-btn
+											a(href="http://www.ulmart.ru/search?string=samsung&category=91468&discount=false", target="_blank", class="catalog-banner-btn__link")
+												| Смотреть все
+						+grid-2()
+							.catalog-banner
+								.catalog-banner-inner.catalog-banner-inner-three
+									.catalog-banner-content
+										h2.catalog-banner-content__title
+											| Носимые устройства
+										.catalog-banner-btn
+											a(href="https://online-samsung.ru/nosimye-ustroystva/", target="_blank", class="catalog-banner-btn__link")
+												| Смотреть все
+						+grid-2()
+							.catalog-banner
+								.catalog-banner-inner.catalog-banner-inner-four
+									.catalog-banner-content
+										h2.catalog-banner-content__title
+											| Аксессуары
+										.catalog-banner-btn
+											a(href="http://www.ulmart.ru/Samsung_Accessories_2706?sort=5&viewType=0&rec=false", target="_blank", class="catalog-banner-btn__link")
+												| Смотреть все
+						+grid-2()
+							.catalog-banner
+								.catalog-banner-inner.catalog-banner-inner-five
+									.catalog-banner-content
+										h2.catalog-banner-content__title
+											| Телевизоры
+										.catalog-banner-btn
+											a(href="samsung_tv_page.html", target="_blank", class="catalog-banner-btn__link")
+												| Смотреть все
+						+grid-2()
+							.catalog-banner
+								.catalog-banner-inner.catalog-banner-inner-six
+									.catalog-banner-content
+										h2.catalog-banner-content__title
+											| Мониторы
+										.catalog-banner-btn
+											a(href="https://www.ulmart.ru/catalog/monitors?sort=0&viewType=1&rec=true&filters=active%3Ab&applied=true&brands=60&jdSuppliers=&warranties=&bargainTypes=&receiptTime=&priceColors=&shops=&labels=&available=false&reserved=false&suborder=false&superPrice=false&showCrossboardGoods=false&showUlmartGoods=false&specOffers=false&availableCounts=", target="_blank", class="catalog-banner-btn__link")
+												| Смотреть все
+						//- .col-lg-12.col-md-12.col-sm-12.col-xs-12
+							.catalog-banner
+								.catalog-banner-inner.catalog-banner-inner-seven
+									.catalog-banner-content
+										h2.catalog-banner-content__title
+											| Экосистема Galaxy.
+											br
+											| Прикоснитесь к безграничному
+										.catalog-banner-btn
+											a(href="https://online-samsung.ru/vpechatleniya-prilagayutsya/", target="_blank", class="catalog-banner-btn__link")
+												| Смотреть все
+
+		.container
+			section.video-reviews
+				.container
+					.row
+						h2.video-title
+							| Видео обзоры
+					.row
+						+grid-2()
+							.video-item
+								.video-item-video
+									<iframe width="100%" height="320" src="https://www.youtube.com/embed/M2OCOGnVEds" frameborder="0" allowfullscreen></iframe>
+								h3.video-item-text
+									|Смартфон без границ Samsung Galaxy S8 | S8+.
+						+grid-2()
+							.video-item
+								.video-item-video
+									<iframe width="100%" height="320" src="https://www.youtube.com/embed/7Es2b5FMZmU" frameborder="0" allowfullscreen></iframe>
+								h3.video-item-text
+									|Samsung QLED TV | Превращаем свет в цвет.
+						+grid-2()
+							.video-item
+								.video-item-video
+									<iframe width="100%" height="320" src="https://www.youtube.com/embed/6EBbV2M4lLA" frameborder="0" allowfullscreen></iframe>
+								h3.video-item-text
+									|Этот пылесос не требует постоянной
+									br
+									| очистки | Samsung Anti-Tange.
+						+grid-2()
+							.video-item
+								.video-item-video
+									<iframe width="100%" height="320" src="https://www.youtube.com/embed/jDUCtnW7fDE" frameborder="0" allowfullscreen></iframe>
+								h3.video-item-text
+									|Стиральные машины  Samsung AddWash. Добавьте бельё во время стирки.
+		.reviews-wrapper
+			.container
+				section.reviews
+					.container
+						.row
+							h2.reviews-title
+								| Обзоры
+						.row
+							#owl-demo2
+									.reviews-item
+										.reviews-img
+											img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/reviews-item1.jpg", alt="обзор")
+										.reviews-inner
+											.reviews-subtitle
+												|Смартфон без границ: открывайте для себя новые возможности вместе с Samsung Galaxy S8 | S8+
+											.reviews-text
+												|Смартфоны нового поколения переворачивают представление о классическом дизайне смартфона.
+											.reviews-btn
+												a(href="https://www.ulmart.ru/dynamic/page/samsung_galaxy", class="reviews-btn__link") Подробнее
+									.reviews-item
+										.reviews-img
+											img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/reviews-item2.jpg", alt="обзор")
+										.reviews-inner
+											.reviews-subtitle
+												|Samsung объявляет о глобальном запуске линейки QLED ТВ и The Frame
+											.reviews-text
+												|QLED ТВ и The Frame открывают новую страницу истории домашних развлечений.
+											.reviews-btn
+												a(href="https://www.ulmart.ru/dynamic/page/samsung_qledtv", target="_blank", class="reviews-btn__link") Подробнее
+									.reviews-item
+										.reviews-img
+											img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/reviews-item3.jpg", alt="обзор")
+										.reviews-inner
+											.reviews-subtitle
+												|Новый пылесос Samsung с турбиной Anti-Tangle обеспечивает уборку без снижения мощности всасывания
+											.reviews-text
+												|Новый Samsung VC5100 оснащен системой CycloneForce с турбиной Anti-Tangle. Она обеспечивает высочайший уровень очитки.
+											.reviews-btn
+												a(href="https://www.ulmart.ru/dynamic/page/samsung_vc5100", target="_blank", class="reviews-btn__link") Подробнее
+									.reviews-item
+										.reviews-img
+											img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/reviews-item4.jpg", alt="обзор")
+										.reviews-inner
+											.reviews-subtitle
+												|Инновации в области стирки и уборки от Samsung
+											.reviews-text
+												|Новые стиральные машины Samsung являются наглядным примером сочетания стиля и производительности.
+											.reviews-btn
+												a(href="https://www.ulmart.ru/dynamic/page/samsung_washer.html", target="_blank", class="reviews-btn__link") Подробнее
+									
+
+
+
+	include blocks/footer-service/footer-service

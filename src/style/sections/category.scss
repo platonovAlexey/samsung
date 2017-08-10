@@ -1,0 +1,218 @@
+.category-banner{
+	margin-bottom: 80px;
+}
+
+.category-titles{
+	margin-bottom: 32px;
+}
+
+.category-title{
+	@extend .title;
+	margin-bottom: 25px;
+}
+
+.category-watch-all{
+	font-size: 16px;
+	color: #000 !important;
+	text-align: left;
+	font-weight: 500;
+	&:hover{
+		color: #1428a0 !important;
+	}
+}
+
+//Товары
+.category-goods{
+	margin-bottom: 110px;
+}
+.goods-category-wrapper{
+	position: relative;
+	@include clearfix;
+	@include MQ(md){
+		margin-bottom: 30px;
+	}
+	
+}
+
+.goods-category{
+	&-head{
+		height: 150px;
+		margin-bottom: 25px;
+		&__phone{
+			height: 250px;
+			margin-bottom: 0;
+		}
+		&__img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	&-middle{
+		text-align: center;
+		color: #000;
+		margin-bottom: 25px;
+		height: 80px;
+		&__title{
+			font-weight: 500;
+			font-size: 20px;
+		}
+		&__subtitle{
+			font-size: 16px;
+		}
+	}
+	&-bottom{
+		&__link{
+			@extend .goods-bottom__link;
+		}
+	}
+}
+
+.category-item-wrap{
+	margin-bottom: 30px;
+	min-height: 450px;
+	@include clearfix;
+	
+	&__one{
+		background: #f7f7f7 url(https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/tv-category-item1.jpg) no-repeat top left;
+		@include MQ(md){
+		background: #f7f7f7;
+		min-height: 250px;
+	}
+	}
+	&__two{
+		background: #f7f7f7 url(https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/tv-category-item2.jpg) no-repeat top right;
+		@include MQ(md){
+		background: #f7f7f7;
+		min-height: 250px;
+	}
+	}
+	&__three{
+		background: #f7f7f7 url(https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/tv-category-item3.jpg) no-repeat top left;
+		@include MQ(md){
+		background: #f7f7f7;
+		min-height: 250px;
+		}
+	}
+	&__four{
+		background: #f7f7f7 url(https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/phone-category-item1.jpg) no-repeat top left;
+		@include MQ(md){
+		background: #f7f7f7;
+		min-height: 250px;
+		}
+	}
+	&__five{
+		background: #f7f7f7 url(https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/phone-category-item2.jpg) no-repeat top right;
+		@include MQ(md){
+		background: #f7f7f7;
+		min-height: 250px;
+		}
+	}
+}
+
+.category-wrapper{
+	@include clearfix;
+	background: #f7f7f7;
+	position: relative;
+
+}
+
+.no-padding{
+	padding: 0;
+}
+
+.category-item{
+	background: #f7f7f7;
+	padding: 140px 100px 0 70px;
+	text-align: left;
+	color: #000;
+	min-height: 427px;
+	margin-bottom: 30px;
+	@include MQ(lg){
+		padding: 100px 0px 0 50px;
+		min-height: 358px;
+	}
+	@include MQ(md){
+		float: none;
+		text-align: center;
+		padding: 30px 0px 0 0;
+		min-height: 265px;
+	}
+	&__img{
+		@include MQ(xs){
+			display: none;
+		}
+	}
+	&__title{
+		@extend .category-title;
+		margin-bottom: 5px;
+		font-weight: 500;
+		line-height: 1;
+		@include MQ(lg){
+			font-size: 2em;
+		}
+		@include MQ(md){
+			text-align: center;
+		}
+	}
+	&__subtitle{
+		font-size: 16px;
+		font-weight: 500;
+		margin-bottom: 40px;
+		@include MQ(md){
+			margin-bottom: 0;
+		}
+	}
+	&__text{
+		margin-bottom: 40px;
+		@include MQ(lg){
+			@include text-overflow;
+		}
+		@include MQ(sm){
+			margin-bottom: 10px;
+		}
+	}
+	&__link{
+		@extend .catalog-banner-btn__link;
+		padding: 16px 75px;
+	}
+
+	&__mod{
+		padding: 150px 0px 0 100px;
+		@include MQ(lg){
+			padding: 100px 0px 0 50px;
+		}
+		@include MQ(md){
+			float: none;
+			text-align: center;
+			padding: 30px 0px 0 0;
+		}
+	}
+
+
+	&__phone{
+		width: 450px;
+		padding: 60px 20px 0 00px;
+	}
+
+	&__phone-mod{
+		float: left;
+		padding: 60px 20px 0 30px;
+		width: 500px;
+		@include MQ(lg){
+		padding: 150px 50px 0 0;
+	}
+}
+}
+
+.category-item-phone{
+	padding: 56px 20px 0 50px;
+	@include MQ(md){
+		padding: 10px 20px 0 10px;
+	}
+	@include MQ(sm){
+		padding: 20px 10px 0 10px;
+	}
+	@include MQ(xs){
+		padding: 10px 10px 0 10px;
+	}
+}

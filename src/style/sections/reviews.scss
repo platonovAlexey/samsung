@@ -1,0 +1,123 @@
+.reviews-wrapper{
+	background: #f7f7f7;
+	padding: 30px 0 80px 0;
+}
+.reviews{
+	position: relative;
+
+	&-item{
+		background: #fff;
+		height: 580px;
+		margin: 0 15px;
+	}
+
+	&-inner{
+		padding: 40px 25px;
+	}
+	&-text{
+		font-size: 16px;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	&-btn{
+		&__link{
+			@extend .goods-bottom__link;
+			position: absolute;
+			bottom: 25px;
+			width: 55%;
+			padding: 16px 0;
+		}
+	}
+	
+	&-title{
+		@extend .video-title;
+	}
+	&-subtitle{
+		font-size: 18px;
+		font-weight: bold;
+		line-height: 1.2;
+		margin-bottom: 50px;
+		height: 75px;
+	}
+}
+
+// TEXTPAGE
+.reviews-pages{
+	&-wrapper{
+		@include clearfix;
+		text-align: left;
+		color: #000;
+	}
+	&-title{
+		font-size: 48px;
+		line-height: 1.1;
+		margin-bottom: 65px;
+		margin-top: 40px;
+		@include MQ(sm){
+			font-size: 30px;
+		}
+	}
+	&-desc{
+		font-size: 18px;
+		font-style: italic;
+		margin-bottom: 40px;
+	}
+	&-subtitle{
+		font-weight: bold;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+	&-img{
+		margin-bottom: 40px;
+	}
+	&-text{
+		font-size: 18px;
+		margin-bottom: 45px;
+		font-weight: 300;
+	}
+	&-list{
+		list-style-type: disc;
+		margin-left: 75px;
+	}
+	&-item{
+		margin-bottom: 40px;
+	}
+	&-subitem{
+		&:last-child{
+			margin-bottom: 30px;
+		}
+	}
+	&-btn{
+		@include clearfix;
+		position: relative;
+		margin: 30px 0 80px 0;
+	}
+	&__back{
+		@extend .goods-bottom__link;
+	}
+	&__buy{
+		@extend .goods-bottom__link;
+		border-color: #0077C8;
+		background: #0077C8;
+		color: #fff!important;
+		cursor: pointer;
+		transition: all 1s;
+		padding: 16px 0px;
+		&:hover{
+			text-align: center;
+			text-decoration: none;
+			background: 0 0;
+			font-size: 16px;
+			color: #000!important;
+			border: 1px solid #000;
+			display: block;
+			border-radius: 40px;
+			padding: 16px 0px;
+			line-height: 1;
+			width: 100%;
+			white-space: nowrap;
+			transition: all 1s;
+			font-weight: 500;
+		}
+	}
+}

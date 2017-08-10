@@ -1,0 +1,71 @@
+include blocks/head-service/head
+include common/mixins
+include common/js
+
+body
+	.layout_center_wrapper-project
+		include templates/header
+
+		section.category-banner
+			.container
+				.row
+					.container
+						a(href="https://www.ulmart.ru/dynamic/page/qledtv", target="_blank")
+							img(class="category-banner-img", src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/phone-banner.jpg", alt="qledTV")
+
+		.container
+			.category-titles
+				h1.category-title Выберите смартфон
+				a(href="http://www.ulmart.ru/catalog/communicators/brand_samsung_1?sort=0&viewType=1&rec=true", target="_blank" class="category-watch-all") Смотреть все смартфоны >
+
+		.container
+			section.category-goods
+				.container
+					.row
+						+grid-3()
+							each item, number in categoryPhone.slice(0,1)
+								+category-goodsPhone(item)
+						+grid-3()
+							each item, number in categoryPhone.slice(1,2)
+								+category-goodsPhone(item)
+						+grid-3()
+							each item, number in categoryPhone.slice(2,3)
+								+category-goodsPhone(item)
+						+grid-3()
+							each item, number in categoryPhone.slice(3,4)
+								+category-goodsPhone(item)
+
+		.container
+			section.sub-category-item
+				.container
+					.row
+						.col-lg-6.col-md-6.col-sm-6.col-xs-6.no-padding
+							img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/phone-category-item1.jpg", alt="", class="category-item__img")
+						.col-lg-6.col-md-6.col-sm-12.col-xs-12.no-padding
+							.category-item.category-item-phone
+								.category-item__title
+									|Galaxy A
+								.category-item__subtitle
+									|Новая серия 2017 года
+								.category-item__text
+									|Смартфоны серии Galaxy A (2017) - это новейшие технологии, облачённые в современный корпус из металла и стекла. Устройства оснащены камерой с высоким разрешением, обладают защитой от воды и пыли, а также поддерживают платёжный сервис Samsung Pay.
+								a(href="http://www.ulmart.ru/search?string=galaxy+A&rootCategory=93287&sort=5&category=80252&rec=false", class="category-item__link", target="_blank") Смотреть
+					.row
+						.col-lg-6.col-md-6.col-sm-12.col-xs-12.no-padding
+							.category-item.category-item-phone
+								.category-item__title
+									|Смартфоны 
+									br
+									|на все случаи жизни
+								.category-item__subtitle
+									|Galaxy J (2016)
+								.category-item__text
+									|Практичные и стильные сартфоны серии Galaxy J
+									br
+									|полностью отвечают требованиям активных и притязателных пользователей.
+								a(href="http://www.ulmart.ru/search?string=galaxy+J&rootCategory=93287&sort=5&category=80252&rec=false", class="category-item__link", target="_blank") Смотреть
+						.col-lg-6.col-md-6.col-sm-6.col-xs-6.no-padding
+							img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/phone-category-item2.jpg", alt="", class="category-item__img")
+
+
+	include blocks/footer-service/footer-service

@@ -1,0 +1,26 @@
+.video-reviews{
+	position: relative;
+}
+
+.video-title{
+	font-size: em($h2FZ);
+	color: #000;
+	text-align: left;
+	margin-left: 15px;
+	margin-bottom: 40px;
+}
+
+.video-item{
+	position: relative;
+	margin-bottom: 50px;
+	&-video{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	&-text{
+		font-size: 22px;
+		font-weight: bold;
+		color: #000;
+		line-height: 1.2;
+	}
+}

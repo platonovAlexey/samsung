@@ -1,0 +1,77 @@
+include blocks/head-service/head
+include common/mixins
+include common/js
+
+body
+	.layout_center_wrapper-project
+		include templates/header
+
+		section.category-banner
+			.container
+				.row
+					.container
+						a(href="https://www.ulmart.ru/dynamic/page/qledtv", target="_blank")
+							img(class="category-banner-img", src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/tv-banner.jpg", alt="qledTV")
+
+		.container
+			.category-titles
+				h1.category-title Выберите телевизор
+				a(href="https://www.ulmart.ru/catalog/tvs_6020_394406?sort=0&viewType=1&rec=true", target="_blank" class="category-watch-all") Смотреть все телевизоры >
+
+		.container
+			section.category-goods
+				.container
+					.row
+						+grid-3()
+							each item, number in categoryTV.slice(0,1)
+								+category-goodsTV(item)
+						+grid-3()
+							each item, number in categoryTV.slice(1,2)
+								+category-goodsTV(item)
+						+grid-3()
+							each item, number in categoryTV.slice(2,3)
+								+category-goodsTV(item)
+						+grid-3()
+							each item, number in categoryTV.slice(3,4)
+								+category-goodsTV(item)
+
+		.container
+			section.sub-category-item
+				.container
+					.row
+						.col-lg-6.col-md-6.col-sm-6.col-xs-6.no-padding
+							img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/tv-category-item1.jpg", alt="", class="category-item__img")
+						.col-lg-6.col-md-6.col-sm-12.col-xs-12.no-padding
+							.category-item
+								.category-item__title
+									|UHD TV
+								.category-item__subtitle
+									|Так выглядит инновация
+								a(href="https://www.ulmart.ru/catalog/tvs_6020_394406?sort=5&viewType=1&rec=false&filters=6007%3A132888%3Bactive%3A6007&applied=true&brands=&jdSuppliers=&warranties=&bargainTypes=&receiptTime=&priceColors=&shops=&labels=&available=false&reserved=false&suborder=false&superPrice=false&showCrossboardGoods=false&showUlmartGoods=false&specOffers=false&availableCounts=", class="category-item__link", target="_blank") Смотреть
+					.row
+						.col-lg-6.col-md-6.col-sm-12.col-xs-12.no-padding
+							.category-item.category-item__mod
+								.category-item__title
+									|Full HD TV
+								.category-item__subtitle
+									|Более насыщенное изображение
+								a(href="https://www.ulmart.ru/catalog/tvs_6020_394406?sort=5&viewType=1&rec=false&filters=6007%3A25768%3Bactive%3A6007&applied=true&brands=&jdSuppliers=&warranties=&bargainTypes=&receiptTime=&priceColors=&shops=&labels=&available=false&reserved=false&suborder=false&superPrice=false&showCrossboardGoods=false&showUlmartGoods=false&specOffers=false&availableCounts=", class="category-item__link", target="_blank") Смотреть
+						.col-lg-6.col-md-6.col-sm-6.col-xs-6.no-padding
+							img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/tv-category-item2.jpg", alt="", class="category-item__img")
+						
+					.row
+						.col-lg-6.col-md-6.col-sm-6.col-xs-6.no-padding
+							img(src="https://fast.ulmart.ru/ns/verstka/samsung-bz-2017/img/tv-category-item3.jpg", alt="", class="category-item__img")
+						.col-lg-6.col-md-6.col-sm-12.col-xs-12.no-padding
+							.category-item
+								.category-item__title
+									|Аудио и видео
+								.category-item__subtitle
+									|Максимальное качество звука
+								a(href="https://www.ulmart.ru/Samsung_AV", class="category-item__link", target="_blank") Смотреть
+
+
+
+
+
+	include blocks/footer-service/footer-service

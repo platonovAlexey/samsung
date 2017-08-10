@@ -1,0 +1,28 @@
+.footer{
+	flex: 0 0 auto;
+	position: relative;
+	background: #f7f7f7;
+	padding: 40px 0 80px 0;
+}
+
+.footer__block{
+	padding-bottom: 30px;
+}
+
+.footer-title{
+	@extend .video-title;
+}
+
+.footer__text{
+	font-size: 16px;
+	color: $footerText;
+	text-align: left;
+	a{
+		font-size: 16px;
+		color: $footerText;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
